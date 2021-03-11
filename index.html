@@ -10,6 +10,11 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin-Sans">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Open+Sans&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -94,12 +99,12 @@
     </div>
 
     <!-- Start of grid layout -->
-    <div class="container-md">
+    <div class="container">
         <div class="row">
             <div class="col-2" id="sidebar">
-                <p>DREAM JOURNAL</p>
-                <p>Explanation</p>
-                <button type="button" class="btn btn-primary" id="addDreamButton">Add Dream</button>
+                <img src="dreamOne.png" id="cloud">
+                <!-- <p class="genericText">Add a dream to get started</p> -->
+                <button type="button" class="btn btn-light" id="addDreamButton">Add Dream</button>
             </div>
 
 
@@ -109,10 +114,10 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Tag</th>
-                            <th scope="col">Edit</th>
+                            <th scope="col" class="tableHeading">DATE</th>
+                            <th scope="col" class="tableHeading">DESCRIPTION</th>
+                            <th scope="col" class="tableHeading">TAG</th>
+                            <th scope="col" class="tableHeading">EDIT</th>
                         </tr>
                     </thead>
                     <tbody id="output">
