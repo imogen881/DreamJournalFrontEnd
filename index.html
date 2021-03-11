@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Journal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Modal for adding dream -->
+    <div class="modal fade" id="add-dream-modal" tabindex="-1" aria-labelledby="add-dream-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-dream-modal-label">Add Dream</h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Form for adding dream -->
+                    <div class="row">
+                        <div class="col-12">
+                            <form id="createDream">
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="date" aria-describedby="dateHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="description">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tag" class="form-label">Tag</label>
+                                    <input type="text" class="form-control" id="tag">
+                                </div>
+                                <button type="button" class="btn btn-secondary" id="cancelAddButton">Cancel</button>
+                                <button type="submit" class="btn btn-primary" id="submit-dream">Submit Dream</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for updating dream -->
+    <div class="modal fade" id="update-dream-modal" tabindex="-1" aria-labelledby="update-dream-modal-label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="update-dream-modal-label">Update Dream</h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Form for updating dream -->
+                    <div class="row">
+                        <div class="col-12">
+                            <form id="updateDream">
+                                <div class="mb-3">
+                                    <label for="updateDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="updateDate" aria-describedby="dateHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="updateDescription" class="form-label">Description</label>
+                                    <input type="text" class="form-control" id="updateDescription">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="updateTag" class="form-label">Tag</label>
+                                    <input type="text" class="form-control" id="updateTag">
+                                </div>
+                                <button type="button" class="btn btn-secondary" id="cancelUpdateButton">Cancel</button>
+                                <button type="submit" class="btn btn-primary" id="submit-updates">Submit
+                                    Updates</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Start of grid layout -->
+    <div class="container-md">
+        <div class="row">
+            <div class="col-2" id="sidebar">
+                <p>DREAM JOURNAL</p>
+                <p>Explanation</p>
+                <button type="button" class="btn btn-primary" id="addDreamButton">Add Dream</button>
+            </div>
+
+
+
+            <!-- Table -->
+            <div class="col-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Tag</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="output">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
