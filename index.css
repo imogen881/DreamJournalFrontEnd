@@ -42,8 +42,8 @@ body {
 }
 
 #submit-dream:hover, #submit-updates:hover {
-    background-color: white;
-    color: #02334a;
+    background-color: #02334a;
+    color: white;
 }
 
 #cloud {

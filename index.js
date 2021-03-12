@@ -89,6 +89,12 @@ function renderDreams(dream) {
     updateDreamButton.innerHTML = '<i class="fa fa-edit" aria-hidden="true" id="updateIcon"></i>';
     updateDreamButton.addEventListener('click', function (event) {
         updateModal.show();
+        const modalDateField = document.getElementById("updateDate");
+        modalDateField.value = dream.date;
+        const modalDescriptionField = document.getElementById("updateDescription");
+        modalDescriptionField.value = dream.description;
+        const modalTagField = document.getElementById("updateTag");
+        modalTagField.value = dream.tag;
         dreamId = dream.id;
     })
 
