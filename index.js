@@ -87,7 +87,7 @@ function renderDreams(dream) {
     const updateDreamButton = document.createElement("button");
     updateDreamButton.className = "btn btn-link";
     updateDreamButton.innerHTML = '<i class="fa fa-edit" aria-hidden="true" id="updateIcon"></i>';
-    updateDreamButton.addEventListener('click', function () {
+    updateDreamButton.addEventListener('click', function (event) {
         updateModal.show();
         dreamId = dream.id;
     })
