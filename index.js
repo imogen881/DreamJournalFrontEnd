@@ -74,24 +74,33 @@ function renderDreams(dream) {
 
     const dreamDate = document.createElement("td");
     dreamDate.innerText = dream.date;
+    dreamDate.className = "dateText";
 
     const dreamDescription = document.createElement("td");
     dreamDescription.innerText = dream.description;
+    dreamDescription.className = "tableText";
 
     const dreamTag = document.createElement("td");
     dreamTag.innerText = dream.tag;
+    dreamTag.className = "tagText";
 
     const updateDreamButton = document.createElement("button");
     updateDreamButton.className = "btn btn-link";
-    updateDreamButton.innerText = "Update";
-    updateDreamButton.addEventListener('click', function () {
+    updateDreamButton.innerHTML = '<i class="fa fa-edit" aria-hidden="true" id="updateIcon"></i>';
+    updateDreamButton.addEventListener('click', function (event) {
         updateModal.show();
+        const modalDateField = document.getElementById("updateDate");
+        modalDateField.value = dream.date;
+        const modalDescriptionField = document.getElementById("updateDescription");
+        modalDescriptionField.value = dream.description;
+        const modalTagField = document.getElementById("updateTag");
+        modalTagField.value = dream.tag;
         dreamId = dream.id;
     })
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "btn btn-link";
-    deleteButton.innerText = "Delete";
+    deleteButton.innerHTML = '<i class="fa fa-trash-o" aria-hidden="true" id="deleteIcon"></i>';
     deleteButton.addEventListener('click', function () {
         deleteDream(dream.id);
     });

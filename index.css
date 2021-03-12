@@ -1,34 +1,90 @@
+body {
+    background-color: #95BDDc;
+}
+
+.tableHeading {
+    color: #02334a;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: x-large;
+}
+
+.tableText {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.dateText {
+    color: #02334a;
+}
+
+.tagText {
+    color: #02334a;
+}
+
 .row {
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
-.edit {
-    margin-right: 20px;
+.genericText {
+    color: #02334a;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#sidebar {
-    margin-top: 1%;
+.modal-body, .modal-header {
+    background-color: #343F3E;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
- /* body {
-    background-image: url('https://t4.ftcdn.net/jpg/02/95/37/45/360_F_295374506_rm6S4oJyI9DSm6li2CliXGTs3poENFS5.jpg');
+#submit-dream, #submit-updates {
+    background-color: white;
+    color: #02334a;
+}
+
+#submit-dream:hover, #submit-updates:hover {
+    background-color: #02334a;
+    color: white;
+}
+
+#cloud {
+    max-width: 90%;
+    margin-bottom: 20%;
+}
+
+#cloudImage {
+    width: 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-} */
+    background-size: cover;    
+    background-position:bottom;
+}
 
-/* body {
-    background-color;
-} */
+#deleteIcon {
+    color: #02334a;
+    font-size: large;
+}
 
-
-/* label, span, div, th, td {
+#updateIcon {
     color: white;
-} */
+    font-size: large;
+}
 
-/* tr:hover {
+#updateIcon:hover {
+    color: #02334a;
+}
+
+#deleteIcon:hover {
     color: white;
-} */
+}
+
+#addDreamButton {
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#343F3E;
+}
+
+#addDreamButton:hover {
+    background-color: #02334a;
+    color: white;
+}
