@@ -26,7 +26,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="add-dream-modal-label">Add Dream</h5>
+                    <h5 class="modal-title" id="add-dream-modal-label">ADD DREAM</h5>
                 </div>
 
                 <div class="modal-body">
@@ -36,19 +36,19 @@
                         <div class="col-12">
                             <form id="createDream">
                                 <div class="mb-3">
-                                    <label for="date" class="form-label">Date</label>
+                                    <label for="date" class="form-label">DATE</label>
                                     <input type="date" class="form-control" id="date" aria-describedby="dateHelp">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="description" class="form-label">Description</label>
+                                    <label for="description" class="form-label">DESCRIPTION</label>
                                     <input type="text" class="form-control" id="description">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="tag" class="form-label">Tag</label>
+                                    <label for="tag" class="form-label">TAG</label>
                                     <input type="text" class="form-control" id="tag">
                                 </div>
                                 <button type="button" class="btn btn-secondary" id="cancelAddButton">Cancel</button>
-                                <button type="submit" class="btn btn-primary" id="submit-dream">Submit Dream</button>
+                                <button type="submit" class="btn btn-light" id="submit-dream">Submit Dream</button>
                             </form>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="update-dream-modal-label">Update Dream</h5>
+                    <h5 class="modal-title" id="update-dream-modal-label">UPDATE DREAM</h5>
                 </div>
 
                 <div class="modal-body">
@@ -75,19 +75,19 @@
                         <div class="col-12">
                             <form id="updateDream">
                                 <div class="mb-3">
-                                    <label for="updateDate" class="form-label">Date</label>
+                                    <label for="updateDate" class="form-label">DATE</label>
                                     <input type="date" class="form-control" id="updateDate" aria-describedby="dateHelp">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="updateDescription" class="form-label">Description</label>
+                                    <label for="updateDescription" class="form-label">DESCRIPTION</label>
                                     <input type="text" class="form-control" id="updateDescription">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="updateTag" class="form-label">Tag</label>
+                                    <label for="updateTag" class="form-label">TAG</label>
                                     <input type="text" class="form-control" id="updateTag">
                                 </div>
                                 <button type="button" class="btn btn-secondary" id="cancelUpdateButton">Cancel</button>
-                                <button type="submit" class="btn btn-primary" id="submit-updates">Submit
+                                <button type="submit" class="btn btn-light" id="submit-updates">Submit
                                     Updates</button>
                             </form>
                         </div>
@@ -103,7 +103,11 @@
         <div class="row">
             <div class="col-2" id="sidebar">
                 <img src="dreamOne.png" id="cloud">
-                <!-- <p class="genericText">Add a dream to get started</p> -->
+                <p class="genericText">1. Click Add Dream to get started</p>
+                <p class="genericText">2. Record the date your dream happened</p>
+                <p class="genericText"> 3. Write a description of your dream</p>
+                <p class="genericText">4. Tag your dream with the key theme so you can keep track of patterns in your
+                    dreaming!</p>
                 <button type="button" class="btn btn-light" id="addDreamButton">Add Dream</button>
             </div>
 
@@ -124,6 +128,15 @@
 
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <img src="clouds.png" id="cloudImage">
             </div>
         </div>
     </div>

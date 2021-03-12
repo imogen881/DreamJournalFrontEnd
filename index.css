@@ -3,7 +3,7 @@ body {
 }
 
 .tableHeading {
-    color: #343F3E;
+    color: #02334a;
     font-family: 'Josefin Sans', sans-serif;
     font-size: x-large;
 }
@@ -14,11 +14,11 @@ body {
 }
 
 .dateText {
-    color: #343F3E;
+    color: #02334a;
 }
 
 .tagText {
-    color: #343F3E;
+    color: #02334a;
 }
 
 .row {
@@ -26,8 +26,24 @@ body {
 }
 
 .genericText {
-    color: #343F3E;
+    color: #02334a;
     font-family: 'Open Sans', sans-serif;
+}
+
+.modal-body, .modal-header {
+    background-color: #343F3E;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#submit-dream, #submit-updates {
+    background-color: white;
+    color: #02334a;
+}
+
+#submit-dream:hover, #submit-updates:hover {
+    background-color: white;
+    color: #02334a;
 }
 
 #cloud {
@@ -35,23 +51,40 @@ body {
     margin-bottom: 20%;
 }
 
-#deleteIcon, #updateIcon {
+#cloudImage {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position:bottom;
+}
+
+#deleteIcon {
+    color: #02334a;
+    font-size: large;
+}
+
+#updateIcon {
     color: white;
     font-size: large;
 }
 
-#deleteIcon:hover, #updateIcon:hover {
-    color: #343F3E;
+#updateIcon:hover {
+    color: #02334a;
+}
+
+#deleteIcon:hover {
+    color: white;
 }
 
 #addDreamButton {
     text-align: center;
     margin-left: 10%;
-    font-family: 'Open Sans', sans-serif;
+    margin-top: 10%;
+    font-family: 'Josefin Sans', sans-serif;
     color:#343F3E;
 }
 
 #addDreamButton:hover {
-    background-color: #343F3E;
+    background-color: #02334a;
     color: white;
 }
